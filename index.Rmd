@@ -1,0 +1,69 @@
+---
+title       : NYSEIndex  
+subtitle    : Viewing NASDAQ or Dow Jones data variation
+author      : Themosp
+job         : 
+logo        : logoNYSEIndex.jpg
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+## What is NYSEIndex
+
+
+
+- Easy way to view New York Stock Exchange indexes
+  - NASDAQ Composite (\^IXIC)
+  - Dow Jones Industrial Average (DJIA)
+  - Define Date Ranges
+- Reactive!
+
+<img src="assets/img/NYSEIndex.jpg" style="width: 800px;"/>
+
+---
+
+## Where do data come from?
+- Data comes from Yahoo, through the R "getSymbols()" function.
+```{r, message=FALSE, warning=FALSE}
+library(shiny)
+library(quantmod)
+library(lattice)
+
+    data<-getSymbols('^IXIC', src = "yahoo", 
+               from = '2014-06-09',
+               to = '2014-06-13',
+               auto.assign = FALSE)
+```
+
+---
+## What do the actual data look like?
+
+```{r}
+head(data)
+```
+
+The IXIC.Close column is what we are looking for.
+
+---
+
+## Application Components
+
+<img src="assets/img/compNYSEIndex.jpg" />
+
+
+---
+
+## What Next?
+
+- Run the application [https://themosp.shinyapps.io/NYSEIndex/](https://themosp.shinyapps.io/NYSEIndex/)
+- Download the code from GitHub: [https://github.com/Themosp/Slidify_NYSE_Index](https://github.com/Themosp/Slidify_NYSE_Index)
+
+
+### Important Note! 
+<code>The information presented in the NYSEIndex application is intended for informational purposes only and should not be used for business, commercial or other activities. All financial trading has risk and includes the danger of financial losses.</code> <span, style='color:blue'>Themosp</span> <code>may not be held responsible for any damages which may arise as a concsequence of the use of the data presented in the NYSEIndex application or from the use of the application itself.</code>
+
+
+
