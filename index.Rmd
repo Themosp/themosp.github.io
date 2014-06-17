@@ -59,7 +59,8 @@ The IXIC.Close column is what we are looking for.
 ## What Next?
 
 - Run the application [https://themosp.shinyapps.io/NYSEIndex/](https://themosp.shinyapps.io/NYSEIndex/)
-- Download the code from GitHub: [https://github.com/Themosp/Slidify_NYSE_Index](https://github.com/Themosp/Slidify_NYSE_Index)
+- Download the code from GitHub: [https://github.com/Themosp/themosp.github.io](https://github.com/Themosp/themosp.github.io)
+- View this presentation online on GH-Pages: [http://themosp.github.io](http://themosp.github.io)
 
 
 ### Important Note! 
