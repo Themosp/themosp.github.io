@@ -31,18 +31,8 @@ mode        : selfcontained # {standalone, draft}
 library(shiny)
 library(quantmod)
 library(lattice)
-
-    data<-getSymbols('^IXIC', src = "yahoo", 
-               from = '2014-06-09',
-               to = '2014-06-13',
-               auto.assign = FALSE)
-```
-
----
-## What do the actual data look like?
-
-```{r}
-head(data)
+    data<-getSymbols('^IXIC',src = "yahoo",from = '2014-06-09',to = '2014-06-13',auto.assign = FALSE)
+    head(data[,1:5])
 ```
 
 The IXIC.Close column is what we are looking for.

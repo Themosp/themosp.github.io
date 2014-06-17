@@ -78,21 +78,9 @@
 <pre><code class="r">library(shiny)
 library(quantmod)
 library(lattice)
-
 data &lt;- getSymbols(&quot;^IXIC&quot;, src = &quot;yahoo&quot;, from = &quot;2014-06-09&quot;, to = &quot;2014-06-13&quot;, 
     auto.assign = FALSE)
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>What do the actual data look like?</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">head(data)
+head(data[, 1:5])
 </code></pre>
 
 <pre><code>##            IXIC.Open IXIC.High IXIC.Low IXIC.Close IXIC.Volume
@@ -101,12 +89,6 @@ data &lt;- getSymbols(&quot;^IXIC&quot;, src = &quot;yahoo&quot;, from = &quot;2
 ## 2014-06-11      4323      4338     4315       4332   1.778e+09
 ## 2014-06-12      4323      4328     4285       4298   1.908e+09
 ## 2014-06-13      4315      4318     4288       4311   1.755e+09
-##            IXIC.Adjusted
-## 2014-06-09          4336
-## 2014-06-10          4338
-## 2014-06-11          4332
-## 2014-06-12          4298
-## 2014-06-13          4311
 </code></pre>
 
 <p>The IXIC.Close column is what we are looking for.</p>
@@ -115,7 +97,7 @@ data &lt;- getSymbols(&quot;^IXIC&quot;, src = &quot;yahoo&quot;, from = &quot;2
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-4" style="background:;">
+<slide class="" id="slide-3" style="background:;">
   <hgroup>
     <h2>Application Components</h2>
   </hgroup>
@@ -126,7 +108,7 @@ data &lt;- getSymbols(&quot;^IXIC&quot;, src = &quot;yahoo&quot;, from = &quot;2
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
+<slide class="" id="slide-4" style="background:;">
   <hgroup>
     <h2>What Next?</h2>
   </hgroup>
@@ -163,20 +145,14 @@ data &lt;- getSymbols(&quot;^IXIC&quot;, src = &quot;yahoo&quot;, from = &quot;2
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='What do the actual data look like?'>
+        data-slide=3 title='Application Components'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Application Components'>
+        data-slide=4 title='What Next?'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='What Next?'>
-         5
       </a>
     </li>
   </ul>

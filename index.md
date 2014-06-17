@@ -32,18 +32,9 @@ mode        : selfcontained # {standalone, draft}
 library(shiny)
 library(quantmod)
 library(lattice)
-
 data <- getSymbols("^IXIC", src = "yahoo", from = "2014-06-09", to = "2014-06-13", 
     auto.assign = FALSE)
-```
-
-
----
-## What do the actual data look like?
-
-
-```r
-head(data)
+head(data[, 1:5])
 ```
 
 ```
@@ -53,12 +44,6 @@ head(data)
 ## 2014-06-11      4323      4338     4315       4332   1.778e+09
 ## 2014-06-12      4323      4328     4285       4298   1.908e+09
 ## 2014-06-13      4315      4318     4288       4311   1.755e+09
-##            IXIC.Adjusted
-## 2014-06-09          4336
-## 2014-06-10          4338
-## 2014-06-11          4332
-## 2014-06-12          4298
-## 2014-06-13          4311
 ```
 
 
